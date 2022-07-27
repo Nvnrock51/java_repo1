@@ -1,15 +1,8 @@
 pipeline{
     agent any
     tools {
-        maven "Maven 3.6.3"
-    }
-    environment {
-        NEXUS_VERSION = "nexus3.40.1-01"
-        NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "3.110.48.86:8081"
-        NEXUS_REPOSITORY = "simple-app"
-        NEXUS_CREDENTIAL_ID = "nexus3"
-    }
+        maven "Maven 3.6.3
+        }
     stages{
         stage("GIT checkout"){
             steps{
@@ -41,7 +34,7 @@ pipeline{
                  ],
                  credentialsId: 'nexus3',
                  groupId: 'works.buddy.samples',
-                 nexusUrl: '3.110.48.86:8081',
+                 nexusUrl: '3.108.219.11:8081',
                  nexusVersion: 'nexus3',
                  protocol: 'http',
                  repository: 'simpleapp-release',
