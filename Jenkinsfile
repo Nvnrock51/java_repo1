@@ -7,7 +7,7 @@ pipeline{
         NEXUS_VERSION = "nexus3.40.1-01"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "3.110.48.86:8081"
-        NEXUS_REPOSITORY = "simple-app"
+        NEXUS_REPOSITORY = "simpleapp-release"
         NEXUS_CREDENTIAL_ID = "nexus3"
     }
     stages{
@@ -41,7 +41,7 @@ pipeline{
                  ],
                  credentialsId: 'nexus3',
                  groupId: 'works.buddy.samples',
-                 nexusUrl: '3.110.48.86:8081',
+                 nexusUrl: 'http://13.233.96.18:8081/repository/simpleapp-release/',
                  nexusVersion: 'nexus3',
                  protocol: 'http',
                  repository: 'simpleapp-release',
