@@ -49,4 +49,12 @@ pipeline{
               }
           }
     }
+    post {
+        success {
+	        mail bcc: '', body: 'Build configure check success', cc: '', from: '', replyTo: '', subject: 'Build Check', to: 'naveen.gaddam91@gmail.com'
+        }
+        failure {
+    	    mail bcc: '', body: 'Build configure check fail', cc: '', from: '', replyTo: '', subject: 'Build Check', to: 'naveen.gaddam91@gmail.com'
+	    }
+	}
 }
